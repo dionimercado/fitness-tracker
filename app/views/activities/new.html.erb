@@ -1,0 +1,20 @@
+<h1>Add a new activity</h1>
+
+<%= form_for( :activity, url: activities_path) do |f| %>
+  <div class="form-group">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, class: 'form-control', placeholder: 'What did you do?' %>
+  <div>
+
+  <div class="form-group">
+    <%= f.label :date %><br>
+    <%= f.date_field :date, class: 'form-control' %>
+  <div>
+
+  <div class="form-group">
+    <%= f.label :duration %><br>
+    <%= f.number_field :duration, class: 'form-control', placeholder: 'How long did it take?' %>
+  <div>
+
+  <%= f.submit 'Save Activity', class: 'btn btn-primary mt-5' %>
+<% end %>
